@@ -1,0 +1,49 @@
+{
+  "leadership": [
+    {
+      "name": "Dr. Mary Johnson",
+      "role": "Executive Director",
+      "bio": "Dr. Johnson brings over 20 years of experience in economic development and entrepreneurship. She holds a Ph.D. in Business Administration and has been instrumental in shaping DKS Liberia's strategic vision.",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400"
+    },
+    {
+      "name": "James Williams",
+      "role": "Program Director",
+      "bio": "James oversees all program operations and curriculum development. With a background in education and business consulting, he ensures our programs meet the highest standards of quality and effectiveness.",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+    },
+    {
+      "name": "Patricia Davis",
+      "role": "Finance Director",
+      "bio": "Patricia manages financial operations and resource allocation. Her expertise in nonprofit finance ensures DKS Liberia operates efficiently and maximizes impact with available resources.",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
+    }
+  ],
+  "board": [
+    {
+      "name": "Robert Taylor",
+      "role": "Board Chair",
+      "bio": "Robert is a successful entrepreneur and investor with a passion for economic development. He provides strategic guidance and connects DKS Liberia with valuable resources and networks.",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400"
+    },
+    {
+      "name": "Susan Martinez",
+      "role": "Board Member",
+      "bio": "Susan is a renowned economist and policy expert. She brings deep insights into economic development strategies and helps shape DKS Liberia's policy engagement initiatives.",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
+    },
+    {
+      "name": "Michael Brown",
+      "role": "Board Member",
+      "bio": "Michael is a community leader and advocate for youth empowerment. He ensures that DKS Liberia's programs remain connected to community needs and priorities.",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400"
+    },
+    {
+      "name": "Elizabeth Wilson",
+      "role": "Board Member",
+      "bio": "Elizabeth is an education specialist with expertise in adult learning and professional development. She advises on curriculum design and program effectiveness.",
+      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400"
+    }
+  ]
+}
+

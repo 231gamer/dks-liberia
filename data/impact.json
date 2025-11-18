@@ -1,0 +1,59 @@
+{
+  "overall": {
+    "enterprisesTrained": 250,
+    "ideasLaunched": 27,
+    "cohortsRan": 7,
+    "businessShowcasing": 100,
+    "careerReadiness": 1500
+  },
+  "yearlyData": {
+    "2020": {
+      "entrepreneursTrained": 200,
+      "businessesLaunched": 50,
+      "jobsCreated": 100
+    },
+    "2021": {
+      "entrepreneursTrained": 300,
+      "businessesLaunched": 75,
+      "jobsCreated": 150
+    },
+    "2022": {
+      "entrepreneursTrained": 400,
+      "businessesLaunched": 100,
+      "jobsCreated": 200
+    },
+    "2023": {
+      "entrepreneursTrained": 500,
+      "businessesLaunched": 100,
+      "jobsCreated": 250
+    },
+    "2024": {
+      "entrepreneursTrained": 100,
+      "businessesLaunched": 25,
+      "jobsCreated": 50
+    }
+  },
+  "successSnapshots": [
+    {
+      "title": "From Market Stall to Retail Chain",
+      "description": "Sarah transformed her small market stall into a retail business with 5 locations, creating 25 jobs.",
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400"
+    },
+    {
+      "title": "Green Tech Startup Success",
+      "description": "Michael's recycling business converts plastic waste into building materials, processing 5 tons monthly.",
+      "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400"
+    },
+    {
+      "title": "Rural Agriculture Innovation",
+      "description": "A farming cooperative increased yields by 300% using sustainable practices learned in our program.",
+      "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=400"
+    },
+    {
+      "title": "Tech Solutions for Local Needs",
+      "description": "A software startup developed solutions serving 50+ local businesses, creating 15 tech jobs.",
+      "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400"
+    }
+  ]
+}
+
