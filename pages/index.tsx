@@ -25,7 +25,7 @@ interface HomeProps {
 export default function Home({ posts, programs, impact, partners }: HomeProps) {
   const heroSlides = [
     {
-      image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200',
+      image: '/slider-1.jpeg',
       headline: 'Empowering Entrepreneurs, Building Communities',
       subtext: 'Transforming lives through comprehensive entrepreneurship training and support programs across Liberia.',
       primaryButtonText: 'Explore Programs',
@@ -34,7 +34,7 @@ export default function Home({ posts, programs, impact, partners }: HomeProps) {
       secondaryButtonLink: '/stories',
     },
     {
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200',
+      image: '/slider-2.jpeg',
       headline: 'Skills for Success, Innovation for Impact',
       subtext: 'Join our professional development programs and unlock your potential for career growth and business success.',
       primaryButtonText: 'Explore Programs',
@@ -43,7 +43,7 @@ export default function Home({ posts, programs, impact, partners }: HomeProps) {
       secondaryButtonLink: '/stories',
     },
     {
-      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200',
+      image: '/slider-3.jpeg',
       headline: 'Green Innovation for Sustainable Growth',
       subtext: 'Building sustainable businesses that create value while protecting our environment for future generations.',
       primaryButtonText: 'Explore Programs',
@@ -147,7 +147,6 @@ export default function Home({ posts, programs, impact, partners }: HomeProps) {
 
         {/* What We Do (new section) */}
         <WhatWeDo variant="home" />
-
         {/* Stats Counter Section */}
         <section className="section-padding bg-gray-50">
           <div className="container-custom">
