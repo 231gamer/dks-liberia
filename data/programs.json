@@ -4,7 +4,7 @@
     "title": "Enterprise Development Program (EDP)",
     "summary": "Comprehensive entrepreneurship training program designed to equip aspiring entrepreneurs with the skills and knowledge needed to start and grow successful businesses.",
     "description": "The Enterprise Development Program is our flagship initiative, providing six months of intensive training covering business planning, financial management, marketing, and operations. Participants receive mentorship, access to resources, and networking opportunities that help them transform their business ideas into reality.",
-    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800",
+    "image": "/program-1.jpeg",
     "impact": "Over 500 entrepreneurs trained, 150+ businesses launched, 300+ jobs created",
     "duration": "6 months",
     "format": "Hybrid (in-person and online)"
@@ -14,7 +14,7 @@
     "title": "Integrated Professional Skills Development Program (IPS-DP)",
     "summary": "A holistic professional development program that combines technical skills training with essential soft skills for career advancement.",
     "description": "The Integrated Professional Skills Development Program prepares individuals for success in today's competitive job market. The program covers project management, communication, leadership, digital literacy, and industry-specific technical skills. Participants work on real-world projects and receive personalized career coaching.",
-    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800",
+    "image": "/program-2.jpeg",
     "impact": "400+ professionals trained, 85% career advancement rate, 250+ job placements",
     "duration": "4 months",
     "format": "Hybrid (in-person and online)"
@@ -24,7 +24,7 @@
     "title": "Green Innovation Program (GIP)",
     "summary": "Empowering entrepreneurs to build sustainable businesses that address environmental challenges while creating economic value.",
     "description": "The Green Innovation Program focuses on sustainable business practices and environmental stewardship. Participants learn about renewable energy, waste management, sustainable agriculture, and eco-friendly product development. The program includes access to green technology resources and connects participants with sustainability-focused investors and partners.",
-    "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800",
+    "image": "/program-3.jpeg",
     "impact": "200+ green businesses launched, 100+ environmental projects, significant waste reduction",
     "duration": "5 months",
     "format": "Hybrid (in-person and online)"
@@ -34,7 +34,7 @@
     "title": "STRIVE Business Development Program (SBDP)",
     "summary": "Comprehensive support program for existing small businesses looking to scale and achieve sustainable growth.",
     "description": "STRIVE provides established small businesses with the tools, knowledge, and support needed to scale effectively. The program includes business diagnostics, growth strategy development, financial planning, marketing support, and access to funding opportunities. Participants receive ongoing mentorship and join a network of successful entrepreneurs.",
-    "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800",
+    "image": "/program-4.jpeg",
     "impact": "300+ businesses supported, average 150% revenue increase, 400+ jobs created",
     "duration": "6 months",
     "format": "Hybrid (in-person and online)"
