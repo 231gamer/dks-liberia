@@ -41,12 +41,66 @@ export default function Programs({ programs }: ProgramsProps) {
     },
   ];
 
+  // Impact statistics from PDF
+  const impactStats = [
+    { number: "250+", label: "Enterprises Trained" },
+    { number: "27+", label: "Businesses Launched" },
+    { number: "236", label: "Jobs Created" },
+    { number: "1500+", label: "Youth Trained" },
+    { number: "44%", label: "Profit Increase" },
+    { number: "50", label: "Businesses Accessed Loans" }
+  ];
+
   return (
     <>
       <Head>
         <title>Our Programs - DKS Liberia</title>
         <meta
+          name="description"
+          content="Explore DKS Liberia's comprehensive programs including Enterprise Development, Incubation & Mentorship, Professional Skills Development, and Green Innovation."
+        />
+        <meta property="og:title" content="Our Programs - DKS Liberia" />
+        <meta property="og:description" content="We provide the skills, mentorship, and resources to help Liberian businesses grow, scale, and become investment-ready." />
+      </Head>
 
+      <Navbar />
+
+      <main>
+        <PageHeader
+          title="WHAT WE DO?"
+          subtitle="At the DKS Incubation Center, we are committed to nurturing Liberia entrepreneurial ecosystem by promoting innovation, and enterprise growth across Liberia. We provide ideators, startups, and early-stage businesses, especially youth and women-led enterprises with the skills, mentorship, and resources to grow, scale, and become investment-ready. Our programs integrate practical training, business incubation, research, and workforce development to create resilient businesses, foster inclusive economic growth, and strengthen local communities."
+        />
+
+        {/* Impact Statistics Section */}
+        <section className="section-padding bg-gray-50">
+          <div className="container-custom">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-text font-heading">
+                Our Impact
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Transforming ideas into successful enterprises and empowering Liberian entrepreneurs
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {impactStats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-center bg-white p-6 rounded-lg shadow-sm border border-gray-100"
+                >
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-2">
+                    {stat.number}
+                  </div>
                   <div className="text-sm text-gray-600 font-medium">
                     {stat.label}
                   </div>
@@ -212,7 +266,7 @@ export default function Programs({ programs }: ProgramsProps) {
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
-      programs: programsData, 
+      programs: programsData,
     },
     revalidate: 3600,
   };
