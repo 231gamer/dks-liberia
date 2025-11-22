@@ -18,7 +18,7 @@ export default function WhatWeDo({ variant = 'home', image }: WhatWeDoProps) {
   const copy = variant === 'about' ? fullText : shortText;
   const imgSrc =
     image ||
-    'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&auto=format&fit=crop&q=60';
+    '/what-we-do-1.jpeg';
 
   return (
     <section className="section-padding bg-white">
