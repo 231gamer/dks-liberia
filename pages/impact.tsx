@@ -134,25 +134,25 @@ export default function Impact({ impact }: ImpactProps) {
           <div className="container-custom">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <StatsCounter
-                end={impact.overall.entrepreneursTrained}
+                end={impact.overall.enterprisesTrained}
                 suffix="+"
                 label="Entrepreneurs Trained"
                 icon="👥"
               />
               <StatsCounter
-                end={impact.overall.businessesLaunched}
+                end={impact.overall.ideasLaunched}
                 suffix="+"
                 label="Businesses Launched"
                 icon="🚀"
               />
               <StatsCounter
-                end={impact.overall.jobsCreated}
+                end={(impact.overall as any).jobsCreated ?? 0}
                 suffix="+"
                 label="Jobs Created"
                 icon="💼"
               />
               <StatsCounter
-                end={impact.overall.communitiesServed}
+                end={(impact.overall as any).communitiesServed ?? 0}
                 suffix="+"
                 label="Communities Served"
                 icon="🏘️"

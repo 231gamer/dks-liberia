@@ -78,7 +78,7 @@ export default function Programs({ programs }: ProgramsProps) {
                 At DKS Liberia, we offer a range of programs designed to meet the diverse needs of
                 entrepreneurs and professionals. Our programs combine practical training with
                 hands-on mentorship, providing participants with the tools and support needed to
-                succeed in today's competitive market.
+                succeed in today&apos;s competitive market.
               </p>
             </motion.div>
           </div>

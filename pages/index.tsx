@@ -91,6 +91,7 @@ export default function Home({ posts, programs, impact, partners }: HomeProps) {
             >
               {/* Main Image */}
               <div className="relative w-full h-[420px] rounded-2xl overflow-hidden shadow-xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900"
                   alt="DKS Liberia entrepreneurship training"
@@ -101,6 +102,7 @@ export default function Home({ posts, programs, impact, partners }: HomeProps) {
 
               {/* Floating Image Card */}
               <div className="absolute -bottom-10 -right-10 w-2/3 md:w-1/2 h-[220px] rounded-xl overflow-hidden shadow-lg border-4 border-white bg-white">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800"
                   alt="Collaborative entrepreneurship session"

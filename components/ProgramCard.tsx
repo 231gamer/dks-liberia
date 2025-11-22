@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 
 interface ProgramCardProps {
+  id?: string;
   title: string;
   summary: string;
   image: string;
