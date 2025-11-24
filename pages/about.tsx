@@ -153,9 +153,9 @@ export default function About({ team }: AboutProps) {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="relative"
             >
-              <div className="relative w-full h-80 md:h-[420px] overflow-hidden rounded-l-[999px]">
+              <div className="relative w-full h-72 md:h-[340px] overflow-hidden rounded-l-[999px]">
                 <Image
-                  src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=1400&auto=format&fit=crop&q=60"
+                  src="/about-dks-1.jpeg"
                   alt="Entrepreneurs collaborating"
                   fill
                   className="object-cover"
@@ -168,7 +168,7 @@ export default function About({ team }: AboutProps) {
         {/* What We Do */}
         <WhatWeDo
           variant="about"
-          image="https://images.unsplash.com/photo-1520975661595-6453be3f7070?w=1400&auto=format&fit=crop&q=60"
+          image="/about-dks-2.jpeg"
         />
 
         {/* Mission & Vision */}

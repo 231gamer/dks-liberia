@@ -1,21 +1,39 @@
 {
   "leadership": [
     {
-      "name": "Dr. Mary Johnson",
+      "name": "David K. Sinatue, Sr.",
       "role": "Executive Director",
-      "bio": "Dr. Johnson brings over 20 years of experience in economic development and entrepreneurship. She holds a Ph.D. in Business Administration and has been instrumental in shaping DKS Liberia's strategic vision.",
+      "bio": "David K. Sinatue, Executive Director of the DKS Incubation Center, leads programs that promote sustainable businessgrowth, youth empowerment, and environmental responsibility in line with GoLocal’s mission. He holds an MSc in Environmental Governance and a BA in Sociology and Public Administration.",
       "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400"
     },
     {
-      "name": "James Williams",
-      "role": "Program Director",
-      "bio": "James oversees all program operations and curriculum development. With a background in education and business consulting, he ensures our programs meet the highest standards of quality and effectiveness.",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+      "name": "Ballah Davis",
+      "role": "Finance Officer",
+      "bio": "Ballah Davis, Finance Officer at the DKS Incubation Center,manages financial operations and ensures effective resource allocation to support program delivery and organization growth. He holds an MBA in Banking and and a BSc in Economics.",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" 
     },
     {
-      "name": "Patricia Davis",
-      "role": "Finance Director",
-      "bio": "Patricia manages financial operations and resource allocation. Her expertise in nonprofit finance ensures DKS Liberia operates efficiently and maximizes impact with available resources.",
+      "name": "Gifty Benson Ughweri",
+      "role": "Program Coordinator",
+      "bio": "Gifty U. Benson, Program Coordinator at the DKS Incubation Center, oversees the planning and execution of programs, ensuring effective delivery and participant engagement. She holds a BA in Mass Communication. ",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
+    },
+    {
+      "name": "J. Musa Sheriff",
+      "role": "Lead Program associate",
+      "bio": "J. Musa Sheriff, Lead Program Associate at the DKS Incubation Center, supports program implementation and coordinates activities to ensure smooth operations and participant engagement. He is a BSc Candidate in Marketing and Supply Chain Management.",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
+    },
+    {
+      "name": "M. Abraham Kortu",
+      "role": "Recruitment & Outreach Coordinator",
+      "bio": "M. Abraham Kortu, Recruitment and Outreach Coordinator at the DKS Incubation Center, manages participant recruitment and outreach activities to engage entrepreneurs and stakeholders. He holds a ASc in Environmental Science and is a BSc Candidate in Environmental Science.",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
+    },
+    {
+      "name": "Prince T. L. Phillips",
+      "role": "Lead Program Associate, GIP",
+      "bio": "Prince T. L. Phillips, Lead Program Associate for the DKS Incubation Center’s Green Innovator Program, supports sustainable business solutions, environmental justice, and climate adaptation and mitigation. He holds an ASc in Environmental Science and is a BSc Candidate in Environmental Science.",
       "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
     }
   ],
