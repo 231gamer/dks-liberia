@@ -1,22 +1,14 @@
 import Head from 'next/head';
-import { useState } from 'react';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import PageHeader from '../components/PageHeader';
 import ContactForm from '../components/ContactForm';
+import ContactInfoCard from '../components/ContactInfoCard';
+import ContactMap from '../components/ContactMap';
+
+const accentLabel = 'text-primary text-sm font-semibold uppercase tracking-[0.28em]';
 
 export default function Contact() {
-  const [newsletterEmail, setNewsletterEmail] = useState('');
-
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Integrate with newsletter service (e.g., Mailchimp, SendGrid)
-    alert('Thank you for subscribing to our newsletter!');
-    setNewsletterEmail('');
-  };
-
   return (
     <>
       <Head>
@@ -31,127 +23,112 @@ export default function Contact() {
 
       <Navbar />
 
-      <main>
-        <PageHeader title="Get in Touch" subtitle="We'd love to hear from you" />
-
-        <section className="section-padding bg-white">
+      <main className="bg-slate-50">
+        {/* Contact Information */}
+        <motion.section
+          className="py-16 md:py-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="container-custom">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Information */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-3xl font-bold mb-6 text-text font-heading">Contact Information</h2>
-                <div className="space-y-6 mb-8">
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2 text-text font-heading">Address</h3>
-                    <p className="text-gray-600">Monrovia, Liberia</p>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2 text-text font-heading">Email</h3>
-                    <a
-                      href="mailto:info@dksliberia.org"
-                      className="text-primary hover:text-secondary transition-colors"
-                    >
-                      info@dksliberia.org
-                    </a>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2 text-text font-heading">Phone</h3>
-                    <a
-                      href="tel:+231123456789"
-                      className="text-primary hover:text-secondary transition-colors"
-                    >
-                      +231 123 456 789
-                    </a>
-                  </div>
-                </div>
-
-                {/* Map Placeholder */}
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold mb-4 text-text font-heading">Location</h3>
-                  <div className="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-                    <p className="text-gray-500">
-                      {/* TODO: Replace with actual Google Maps embed */}
-                      <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.9485!2d-10.7976!3d6.3004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTgnMDEuNCJOIDEwwrA0Nyc1MS40Ilc!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        className="rounded-lg"
-                      />
-                    </p>
-                  </div>
-                  <p className="text-sm text-gray-500 mt-2">
-                    {/* TODO: Replace placeholder map with actual DKS Liberia location coordinates */}
-                    Map placeholder - Replace with actual Google Maps embed
-                  </p>
-                </div>
-
-                {/* Newsletter Subscription */}
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-lg font-semibold mb-4 text-text font-heading">
-                    Subscribe to Our Newsletter
-                  </h3>
-                  <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
-                    <input
-                      type="email"
-                      value={newsletterEmail}
-                      onChange={(e) => setNewsletterEmail(e.target.value)}
-                      placeholder="Your email address"
-                      required
-                      className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                    />
-                    <button type="submit" className="btn-primary">
-                      Subscribe
-                    </button>
-                  </form>
-                </div>
-              </motion.div>
-
-              {/* Contact Form */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-3xl font-bold mb-6 text-text font-heading">Send us a Message</h2>
-                <ContactForm />
-              </motion.div>
+            <div className="text-center space-y-3 mb-10">
+              <p className={accentLabel}>Contact Information</p>
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Get In Touch With Us</h1>
             </div>
-
-            {/* Book a Meeting Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mt-12 bg-primary text-white p-8 rounded-lg text-center"
-            >
-              <h2 className="text-2xl font-bold mb-4 font-heading">Want to Schedule a Meeting?</h2>
-              <p className="text-lg mb-6 text-gray-200">
-                Book a one-on-one session with our team to discuss how our programs can help you
-                achieve your goals.
-              </p>
-              {/* TODO: Replace with actual booking page URL */}
-              <a
-                href="https://calendly.com/dksliberia"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary bg-white text-primary hover:bg-gray-100 inline-block"
-              >
-                Book a Meeting
-              </a>
-            </motion.div>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <ContactInfoCard
+                title="Location"
+                lines={['DKS Liberia Incubation Hub', 'Monrovia, Liberia']}
+                cta={{ label: 'Get Directions', href: 'https://maps.google.com?q=Monrovia' }}
+                icon={
+                  <svg
+                    className="h-10 w-10 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 12.75a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5Z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6.75 9.75c0 4.556 5.25 8.25 5.25 8.25s5.25-3.694 5.25-8.25a5.25 5.25 0 1 0-10.5 0Z"
+                    />
+                  </svg>
+                }
+              />
+              <ContactInfoCard
+                title="Phone"
+                lines={['(+231) 77 000 000', '(+231) 88 000 000']}
+                cta={{ label: 'Call Now', href: 'tel:+23177000000' }}
+                icon={
+                  <svg
+                    className="h-9 w-9 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect x="7" y="3" width="10" height="18" rx="2" ry="2" />
+                    <path d="M11 5h2M11 19h2" />
+                  </svg>
+                }
+              />
+              <ContactInfoCard
+                title="Email"
+                lines={['info@dksliberia.org', 'support@dksliberia.org']}
+                cta={{ label: 'Email Now', href: 'mailto:info@dksliberia.org' }}
+                icon={
+                  <svg
+                    className="h-9 w-9 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="2" ry="2" />
+                    <path d="m3 7 9 6 9-6" />
+                  </svg>
+                }
+              />
+            </div>
           </div>
-        </section>
+        </motion.section>
+
+        {/* Contact Form */}
+        <motion.section
+          className="pb-16 md:pb-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+        >
+          <div className="container-custom">
+            <div className="text-center space-y-3 mb-10">
+              <p className={accentLabel}>Get In Touch With Us</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Send Us a Message</h2>
+            </div>
+            <div className="mx-auto max-w-4xl">
+              <ContactForm />
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Map */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <ContactMap />
+        </motion.div>
       </main>
 
       <Footer />

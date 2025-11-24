@@ -7,23 +7,23 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 // 3. Send an email notification using a service like SendGrid, Mailgun, or AWS SES
 // 4. Optionally send an auto-reply to the user
 
-interface ContactRequest {
-  name: string;
-  email: string;
-  message: string;
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     try {
-      const { name, email, message }: ContactRequest = req.body;
+      const { name, email, message, phone, subject } = req.body as {
+        name?: string;
+        email?: string;
+        message?: string;
+        phone?: string;
+        subject?: string;
+      };
 
       // Basic validation
       if (!name || !email || !message) {
         return res.status(400).json({ error: 'All fields are required' });
+      }
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+        return res.status(400).json({ error: 'Email is invalid' });
       }
 
       // TODO: Add email validation
@@ -41,6 +41,7 @@ export default async function handler(
       res.status(200).json({
         success: true,
         message: 'Thank you for your message! We will get back to you soon.',
+        payload: { name, email, message, phone, subject },
       });
     } catch (error) {
       console.error('Contact form error:', error);
