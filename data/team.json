@@ -3,65 +3,64 @@
     {
       "name": "David K. Sinatue, Sr.",
       "role": "Executive Director",
-      "bio": "David K. Sinatue, Executive Director of the DKS Incubation Center, leads programs that promote sustainable businessgrowth, youth empowerment, and environmental responsibility in line with GoLocal’s mission. He holds an MSc in Environmental Governance and a BA in Sociology and Public Administration.",
-      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400"
+      "bio": "David K. Sinatue, Executive Director of the DKS Incubation Center, leads programs that promote sustainable businessgrowth, youth empowerment, and environmental responsibility in line with GoLocal�?Ts mission. He holds an MSc in Environmental Governance and a BA in Sociology and Public Administration.",
+      "image": "/team/David K. Sinatue, Sr..png"
     },
     {
       "name": "Ballah Davis",
       "role": "Finance Officer",
       "bio": "Ballah Davis, Finance Officer at the DKS Incubation Center,manages financial operations and ensures effective resource allocation to support program delivery and organization growth. He holds an MBA in Banking and and a BSc in Economics.",
-      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" 
+      "image": "/team/Ballah Davis.png"
     },
     {
       "name": "Gifty Benson Ughweri",
       "role": "Program Coordinator",
       "bio": "Gifty U. Benson, Program Coordinator at the DKS Incubation Center, oversees the planning and execution of programs, ensuring effective delivery and participant engagement. She holds a BA in Mass Communication. ",
-      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
+      "image": "/team/Gifty Benson Ughweri.png"
     },
     {
       "name": "J. Musa Sheriff",
       "role": "Lead Program associate",
       "bio": "J. Musa Sheriff, Lead Program Associate at the DKS Incubation Center, supports program implementation and coordinates activities to ensure smooth operations and participant engagement. He is a BSc Candidate in Marketing and Supply Chain Management.",
-      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
+      "image": "/team/J. Musa Sheriff.png"
     },
     {
       "name": "M. Abraham Kortu",
       "role": "Recruitment & Outreach Coordinator",
       "bio": "M. Abraham Kortu, Recruitment and Outreach Coordinator at the DKS Incubation Center, manages participant recruitment and outreach activities to engage entrepreneurs and stakeholders. He holds a ASc in Environmental Science and is a BSc Candidate in Environmental Science.",
-      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
+      "image": "/team/M. Abraham Kortu.png"
     },
     {
       "name": "Prince T. L. Phillips",
       "role": "Lead Program Associate, GIP",
-      "bio": "Prince T. L. Phillips, Lead Program Associate for the DKS Incubation Center’s Green Innovator Program, supports sustainable business solutions, environmental justice, and climate adaptation and mitigation. He holds an ASc in Environmental Science and is a BSc Candidate in Environmental Science.",
-      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
+      "bio": "Prince T. L. Phillips, Lead Program Associate for the DKS Incubation Center�?Ts Green Innovator Program, supports sustainable business solutions, environmental justice, and climate adaptation and mitigation. He holds an ASc in Environmental Science and is a BSc Candidate in Environmental Science.",
+      "image": "/team/Prince T. L. Phillips.png"
     }
   ],
   "board": [
     {
-      "name": "Robert Taylor",
+      "name": "Matthias M. Yeanay",
       "role": "Board Chair",
-      "bio": "Robert is a successful entrepreneur and investor with a passion for economic development. He provides strategic guidance and connects DKS Liberia with valuable resources and networks.",
-      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400"
+      "bio": "Executive Director, Founder, InfoQuest",
+      "image": "/team/Matthias M. Yeanay.png"
     },
     {
-      "name": "Susan Martinez",
-      "role": "Board Member",
-      "bio": "Susan is a renowned economist and policy expert. She brings deep insights into economic development strategies and helps shape DKS Liberia's policy engagement initiatives.",
-      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
+      "name": "Meimah O. J. Whenyou",
+      "role": "Board Member, DKS Incubation Center",
+      "bio": "",
+      "image": "/team/Meimah O. J. Whenyou.png"
     },
     {
-      "name": "Michael Brown",
-      "role": "Board Member",
-      "bio": "Michael is a community leader and advocate for youth empowerment. He ensures that DKS Liberia's programs remain connected to community needs and priorities.",
-      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400"
+      "name": "Lars Peeters",
+      "role": "Board Member, DKS Incubation Center",
+      "bio": "Executive Director, Founder, Giving Joy Grants",
+      "image": "/team/Lars Peeters.png"
     },
     {
-      "name": "Elizabeth Wilson",
-      "role": "Board Member",
-      "bio": "Elizabeth is an education specialist with expertise in adult learning and professional development. She advises on curriculum design and program effectiveness.",
-      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400"
+      "name": "David K. Sinatue, Sr.",
+      "role": "Secretary to the board",
+      "bio": "Executive Director, Founder, DKS Incubation Center.",
+      "image": "/team/David K. Sinatue, Sr.png"
     }
   ]
 }
-
