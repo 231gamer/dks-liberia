@@ -69,7 +69,7 @@ const Navbar = () => {
   return (
     <>
       {/* Sticky Top Bar */}
-      <div className="sticky top-0 z-50 bg-secondary text-background text-xs py-2">
+      <div className="hidden md:block sticky top-0 z-50 bg-secondary text-background text-xs py-2">
         <div className="container-custom">
           <div className="flex justify-between items-center">
             {/* Left - Contact Info */}
@@ -107,7 +107,7 @@ const Navbar = () => {
 
       {/* Sticky Main Navigation */}
       <nav
-        className={`sticky top-8 left-0 right-0 z-40 transition-all duration-300 ${
+        className={`sticky left-0 right-0 z-40 transition-all duration-300 top-0 md:top-8 ${
           isScrolled ? 'bg-background shadow-md' : 'bg-background backdrop-blur-sm'
         }`}
       >
