@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
       <ScrollToTopButton />
 
-      {/* Vercel Analytics */}
+      {/* Vercel Analytics & SpeedInsights*/}
       <Analytics />
       <SpeedInsights />
     </>
