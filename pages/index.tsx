@@ -120,7 +120,7 @@ export default function Home({ posts, programs, impact, partners }: HomeProps) {
               className="md:pl-10"
             >
               <p className="text-primary font-semibold uppercase tracking-widest mb-3">
-                About DKS Liberia
+                About DKS Incubation Center
               </p>
               <h2 className="text-3xl md:text-4xl font-bold text-text mb-6 font-heading leading-snug">
                 Empowering Entrepreneurs <br /> & Building Sustainable Communities

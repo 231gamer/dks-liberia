@@ -12,9 +12,11 @@ export default function ContactInfoCard({ icon, title, lines, cta }: ContactInfo
     <div className="group flex flex-col items-center gap-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-md text-center transition hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl">
       <div
         aria-label={title}
-        className="flex h-20 w-20 items-center justify-center rounded-full bg-gray-200 text-primary shadow-inner ring-4 ring-white transition group-hover:scale-105 group-hover:bg-primary group-hover:text-white"
+        className="flex h-20 w-20 items-center justify-center rounded-full bg-blue-100 text-blue-600 shadow-inner ring-4 ring-white transition group-hover:scale-105 group-hover:bg-primary group-hover:text-white"
       >
-        <span className="text-3xl">{icon}</span>
+        <span className="text-3xl text-blue-600 transition-colors group-hover:text-white">
+          {icon}
+        </span>
       </div>
       <div className="space-y-2">
         <h3 className="text-xl font-semibold text-gray-900">{title}</h3>

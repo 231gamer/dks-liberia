@@ -133,8 +133,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="tel:+231123456789" className="hover:text-accent">
-                  +231 123 456 789
+                <a href="tel:+231777842609" className="hover:text-accent">
+                  +231-777-842609
+                </a>
+              </li>
+              <li>
+                <a href="tel:+231880557574" className="hover:text-accent">
+                  +231-880-557574
                 </a>
               </li>
             </ul>

@@ -44,7 +44,7 @@ export default function Contact() {
                 cta={{ label: 'Get Directions', href: 'https://maps.google.com?q=Monrovia' }}
                 icon={
                   <svg
-                    className="h-10 w-10 text-white"
+                    className="h-10 w-10"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.8"
@@ -65,11 +65,11 @@ export default function Contact() {
               />
               <ContactInfoCard
                 title="Phone"
-                lines={['(+231) 77 000 000', '(+231) 88 000 000']}
-                cta={{ label: 'Call Now', href: 'tel:+23177000000' }}
+                lines={['+231-777-842609', '+231-880-557574']}
+                cta={{ label: 'Call Now', href: 'tel:+231777842609' }}
                 icon={
                   <svg
-                    className="h-9 w-9 text-white"
+                    className="h-9 w-9"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.8"
@@ -86,7 +86,7 @@ export default function Contact() {
                 cta={{ label: 'Email Now', href: 'mailto:info@dksliberia.org' }}
                 icon={
                   <svg
-                    className="h-9 w-9 text-white"
+                    className="h-9 w-9"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.8"

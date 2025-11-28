@@ -58,7 +58,7 @@ export default function About({ team }: AboutProps) {
     },
   ];
 
-  // Placeholder partner logos (replace with real logos later)
+  // Placeholder partner logos
   const partners = [
     {
       name: 'Partner One',
@@ -302,37 +302,6 @@ export default function About({ team }: AboutProps) {
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-text font-heading">
-                Leadership Team
-              </h2>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {team.leadership.map((member, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gray-50 p-6 rounded-lg text-center"
-                >
-                  <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
-                    <Image src={member.image} alt={member.name} fill className="object-cover" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 text-text font-heading">{member.name}</h3>
-                  <p className="text-primary font-semibold mb-3">{member.role}</p>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-text font-heading">
                 Board of Directors
               </h2>
             </motion.div>
@@ -351,6 +320,37 @@ export default function About({ team }: AboutProps) {
                   </div>
                   <h3 className="text-lg font-bold mb-2 text-text font-heading">{member.name}</h3>
                   <p className="text-primary font-semibold mb-3 text-sm">{member.role}</p>
+                  <p className="text-gray-600 text-sm">{member.bio}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-text font-heading">
+                Leadership Team
+              </h2>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+              {team.leadership.map((member, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-gray-50 p-6 rounded-lg text-center"
+                >
+                  <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+                    <Image src={member.image} alt={member.name} fill className="object-cover" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-text font-heading">{member.name}</h3>
+                  <p className="text-primary font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-600 text-sm">{member.bio}</p>
                 </motion.div>
               ))}

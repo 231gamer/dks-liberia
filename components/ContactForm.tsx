@@ -96,7 +96,7 @@ export default function ContactForm() {
             value={formData.phone}
             onChange={handleChange}
             className={inputClasses}
-            placeholder="(+231) 77 000 000"
+            placeholder="+231-777-842609"
           />
         </div>
       </div>
