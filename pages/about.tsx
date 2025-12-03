@@ -63,22 +63,22 @@ export default function About({ team }: AboutProps) {
     {
       name: 'Partner One',
       logo:
-        'https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=200&auto=format&fit=crop&q=60',
+        '/img-8.jpeg',
     },
     {
       name: 'Partner Two',
       logo:
-        'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=200&auto=format&fit=crop&q=60',
+        '/img-9.jpeg',
     },
     {
       name: 'Partner Three',
       logo:
-        'https://images.unsplash.com/photo-1510936111840-65e151ad71bb?w=200&auto=format&fit=crop&q=60',
+        '/img-10.jpeg',
     },
     {
       name: 'Partner Four',
       logo:
-        'https://images.unsplash.com/photo-1520975661595-6453be3f7070?w=200&auto=format&fit=crop&q=60',
+        '/img-11.jpeg',
     },
   ];
 

@@ -28,12 +28,13 @@ const BlogCard = ({ slug, title, excerpt, image, date, category }: BlogCardProps
       className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
     >
       <Link href={`/stories/${slug}`}>
-        <div className="relative h-48">
+        <div className="relative aspect-[4/3] bg-gray-100">
           <Image
             src={image}
             alt={title}
             fill
-            className="object-cover"
+            className="object-contain"
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           />
           <div className="absolute top-4 left-4">
             <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
