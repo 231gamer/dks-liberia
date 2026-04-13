@@ -21,6 +21,8 @@ const StatsCounter = ({
 }: StatsCounterProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
+  const safeId = `counter-${label.toLowerCase().replace(/[^a-z0-9]+/gi, '-')}`;
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -31,7 +33,7 @@ const StatsCounter = ({
       { threshold: 0.1 }
     );
 
-    const element = document.getElementById(`counter-${label}`);
+    const element = document.getElementById(safeId);
     if (element) {
       observer.observe(element);
     }
@@ -41,11 +43,11 @@ const StatsCounter = ({
         observer.unobserve(element);
       }
     };
-  }, [label]);
+  }, [safeId]);
 
   return (
     <motion.div
-      id={`counter-${label}`}
+      id={safeId}
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}

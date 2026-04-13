@@ -4,7 +4,6 @@ import { GetStaticProps } from 'next';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import HeroSlider from '../components/HeroSlider';
 import ProgramCard from '../components/ProgramCard';
 import StatsCounter from '../components/StatsCounter';
 import BlogCard from '../components/BlogCard';
@@ -22,37 +21,38 @@ interface HomeProps {
   partners: typeof partnersData;
 }
 
-export default function Home({ posts, programs, impact, partners }: HomeProps) {
-  const heroSlides = [
-    {
-      image: '/slider-1.jpeg',
-      headline: 'Empowering Entrepreneurs, Building Communities',
-      subtext: 'Transforming lives through comprehensive entrepreneurship training and support programs across Liberia.',
-      primaryButtonText: 'Explore Programs',
-      primaryButtonLink: '/programs',
-      secondaryButtonText: 'Read Stories',
-      secondaryButtonLink: '/stories',
-    },
-    {
-      image: '/slider-2.jpeg',
-      headline: 'Skills for Success, Innovation for Impact',
-      subtext: 'Join our professional development programs and unlock your potential for career growth and business success.',
-      primaryButtonText: 'Explore Programs',
-      primaryButtonLink: '/programs',
-      secondaryButtonText: 'Read Stories',
-      secondaryButtonLink: '/stories',
-    },
-    {
-      image: '/slider-3.jpeg',
-      headline: 'Green Innovation for Sustainable Growth',
-      subtext: 'Building sustainable businesses that create value while protecting our environment for future generations.',
-      primaryButtonText: 'Explore Programs',
-      primaryButtonLink: '/programs',
-      secondaryButtonText: 'Read Stories',
-      secondaryButtonLink: '/stories',
-    },
+type ProgramType = typeof programsData[number] & { date?: string };
+
+export default function Home({ posts, programs, partners }: HomeProps) {
+  const statsData = [
+    { end: 380, suffix: '+', label: 'Enterprises Trained', icon: '🏢' },
+    { end: 50, suffix: '+', label: 'Startup/Early-stage businesses received access to finance', icon: '💰' },
+    { end: 27, suffix: '+', label: 'Ideas Launched', icon: '💡' },
+    { end: 8, suffix: '+', label: 'Cohorts Ran', icon: '🎓' },
+    { end: 100, suffix: '+', label: 'Business Showcased', icon: '📣' },
+    { end: 199, suffix: '+', label: 'Businesses Mentored', icon: '🤝' },
+    { end: 1850, suffix: '+', label: 'Junior Professionals Trained', icon: '👩‍💼' },
   ];
 
+  const getUpcomingTraining = (programList: ProgramType[]) => {
+    const now = new Date();
+    const datedPrograms = programList
+      .map((program) => ({
+        ...program,
+        dateValue: program.date ? new Date(program.date) : null,
+      }))
+      .filter((program) => program.dateValue instanceof Date && !Number.isNaN(program.dateValue.getTime()))
+      .sort((a, b) => (a.dateValue!.getTime() - b.dateValue!.getTime()));
+
+    if (datedPrograms.length) {
+      const nextEvent = datedPrograms.find((program) => program.dateValue! >= now);
+      return nextEvent ?? datedPrograms[0];
+    }
+
+    return programList.length > 0 ? programList[0] : null;
+  };
+
+  const upcomingTraining = getUpcomingTraining(programs as ProgramType[]);
   const featuredPosts = posts.slice(0, 3);
 
   return (
@@ -75,8 +75,62 @@ export default function Home({ posts, programs, impact, partners }: HomeProps) {
       <Navbar />
 
       <main>
-        {/* Hero Slider */}
-        <HeroSlider slides={heroSlides} />
+        {/* Hero Section */}
+        <section className="relative min-h-[620px] bg-[url('/slider-1.jpeg')] bg-cover bg-center text-white">
+          <div className="absolute inset-0 bg-black/65" />
+          <div className="container-custom relative z-10 flex items-center min-h-[620px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+              <div className="max-w-2xl">
+                <p className="text-primary uppercase tracking-[0.3em] font-semibold mb-4">
+                  Upcoming Training
+                </p>
+                {upcomingTraining ? (
+                  <>
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-5 font-heading leading-tight">
+                      {upcomingTraining.title}
+                    </h1>
+                    {upcomingTraining.summary ? (
+                      <p className="text-lg md:text-xl text-gray-200 mb-5">
+                        {upcomingTraining.summary}
+                      </p>
+                    ) : upcomingTraining.description ? (
+                      <p className="text-lg md:text-xl text-gray-200 mb-5">
+                        {upcomingTraining.description}
+                      </p>
+                    ) : null}
+                    {upcomingTraining.date ? (
+                      <p className="text-sm md:text-base text-gray-300 mb-6">
+                        Date: {new Date(upcomingTraining.date).toLocaleDateString(undefined, {
+                          month: 'long',
+                          day: 'numeric',
+                          year: 'numeric',
+                        })}
+                      </p>
+                    ) : null}
+                    <Link
+                      href={upcomingTraining.id ? `/programs#${upcomingTraining.id}` : '/programs'}
+                      className="btn-primary inline-block"
+                    >
+                      View Training Details
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-5 font-heading leading-tight">
+                      No upcoming training scheduled
+                    </h1>
+                    <p className="text-lg md:text-xl text-gray-200 mb-6">
+                      Check back soon for the next training opportunity.
+                    </p>
+                    <Link href="/programs" className="btn-primary inline-block">
+                      Explore Programs
+                    </Link>
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* About Section */}
         <section className="section-padding bg-white">
@@ -152,37 +206,10 @@ export default function Home({ posts, programs, impact, partners }: HomeProps) {
         {/* Stats Counter Section */}
         <section className="section-padding bg-gray-50">
           <div className="container-custom">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-              <StatsCounter
-                end={impact.overall.enterprisesTrained}
-                suffix="+"
-                label="Enterprises Trained"
-                icon="🏢"
-              />
-              <StatsCounter
-                end={impact.overall.ideasLaunched}
-                suffix="+"
-                label="Ideas Launched"
-                icon="💡"
-              />
-              <StatsCounter
-                end={impact.overall.cohortsRan}
-                suffix="+"
-                label="Cohorts Ran"
-                icon="🎓"
-              />
-              <StatsCounter
-                end={impact.overall.businessShowcasing}
-                suffix="+"
-                label="Business Showcasing"
-                icon="📈"
-              />
-              <StatsCounter
-                end={impact.overall.careerReadiness}
-                suffix="+"
-                label="Career Readiness"
-                icon="🧭"
-              />
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8">
+              {statsData.map((stat) => (
+                <StatsCounter key={stat.label} {...stat} />
+              ))}
             </div>
           </div>
         </section>
