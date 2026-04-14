@@ -218,6 +218,10 @@ export default function Programs({ programs }: ProgramsProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  const filePath = path.join(process.cwd(), 'data', 'programs.json');
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const programsData: ProgramType[] = JSON.parse(fileContents);
+
   return {
     props: {
       programs: programsData,
