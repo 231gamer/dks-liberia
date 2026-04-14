@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
@@ -11,10 +13,21 @@ import 'swiper/css/pagination';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import PageHeader from '../components/PageHeader';
-import programsData from '../data/programs.json';
+
+interface ProgramType {
+  id: string;
+  title: string;
+  summary: string;
+  description: string;
+  image: string;
+  impact: string;
+  duration: string;
+  format: string;
+  date?: string;
+}
 
 interface ProgramsProps {
-  programs: typeof programsData;
+  programs: ProgramType[];
 }
 
 export default function Programs({ programs }: ProgramsProps) {

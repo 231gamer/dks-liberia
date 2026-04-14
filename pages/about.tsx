@@ -8,6 +8,7 @@ import PageHeader from '../components/PageHeader';
 import teamData from '../data/team.json';
 import WhatWeDo from '../components/WhatWeDo';
 import PartnersStrip from '../components/PartnersStrip';
+import StatsCounter from '../components/StatsCounter';
 
 interface AboutProps {
   team: typeof teamData;
@@ -15,16 +16,41 @@ interface AboutProps {
 
 export default function About({ team }: AboutProps) {
   const milestones = [
-    { year: '2019 - Present', event: 'Trained over 1,850 youth, equipping them with entrepreneurial skills, mentorship, and practical business knowledge.' },
-    { year: '2019 - Present', event: 'Launched the Integrated Professional Skills Development Program (IPS-DP) to strengthen workforce capabilities.' },
-    { year: '2022 – Present', event: 'Trained over 285 MSMEs, ideators, and entrepreneurs, supporting business growth and enterprise development.' },
-    { year: '2022 – Present', event: 'Launched the Enterprise Development Program (EDP) to support startups and early-stage businesses.' },
-    { year: '2023', event: 'Partnered with Giving Joy Grants to train 55 female entrepreneurs, promoting women-led enterprises.' },
-    { year: '2024', event: 'Strengthened partnership with the Universal Outreach Foundation to manage the Strive Business Development Program (SBDP).' },
-    { year: '2024', event: 'Actively managing the SBDP, providing mentorship, training, and business support to youth and early-stage entrepreneurs.' },
-    { year: '2025', event: 'Launched the Green Innovation Program (GIP), promoting sustainable and environmentally responsible entrepreneurship.' },
-    { year: '2025', event: 'Strengthened partnership with Conservation International under the Adaptation Acceleration Program.' },
-    { year: '2025', event: 'Launched the SBDP Growth Accelerator Program (GAP), enhancing business scalability and investment readiness.' },
+    {
+      year: '2019–Present',
+      events: [
+        'Trained over 1,850 youth, equipping them with entrepreneurial skills, mentorship, and practical business knowledge.',
+        'Launched the Integrated Professional Skills Development Program (IPS-DP) to strengthen workforce capabilities.',
+      ],
+    },
+    {
+      year: '2022–Present',
+      events: [
+        'Trained over 285 MSMEs, ideators, and entrepreneurs, supporting business growth and enterprise development.',
+        'Launched the Enterprise Development Program (EDP) to support startups and early-stage businesses.',
+      ],
+    },
+    {
+      year: '2023',
+      events: [
+        'Partnered with Giving Joy Grants to train 55 female entrepreneurs, promoting women-led enterprises.',
+      ],
+    },
+    {
+      year: '2024',
+      events: [
+        'Strengthened partnership with the Universal Outreach Foundation to manage the Strive Business Development Program (SBDP).',
+        'Actively managing the SBDP, providing mentorship, training, and business support to youth and early-stage entrepreneurs.',
+      ],
+    },
+    {
+      year: '2025',
+      events: [
+        'Launched the Green Innovation Program (GIP), promoting sustainable and environmentally responsible entrepreneurship.',
+        'Strengthened partnership with Conservation International under the Adaptation Acceleration Program.',
+        'Launched the SBDP Growth Accelerator Program (GAP), enhancing business scalability and investment readiness.',
+      ],
+    },
   ];
 
   const missionVision = {
@@ -86,20 +112,14 @@ export default function About({ team }: AboutProps) {
   ];
 
   const impactStats = [
-    { label: 'Entrepreneurs Trained', value: '380+' },
-    { label: 'Businesses Launched', value: '27' },
-    { label: 'Cohorts Completed', value: '7' },
-    { label: 'Businesses Showcased', value: '100+' },
-    { label: 'Youth Reached', value: '1,500+' },
+    { end: 380, suffix: '+', label: 'Enterprises Trained', icon: '🏢' },
+    { end: 50, suffix: '+', label: 'Startup/Early-stage businesses received access to finance', icon: '💰' },
+    { end: 27, suffix: '+', label: 'Ideas Launched', icon: '💡' },
+    { end: 8, suffix: '+', label: 'Cohorts Ran', icon: '🎓' },
+    { end: 100, suffix: '+', label: 'Business Showcased', icon: '📣' },
+    { end: 199, suffix: '+', label: 'Businesses Mentored', icon: '🤝' },
+    { end: 1850, suffix: '+', label: 'Junior Professionals Trained', icon: '👩‍💼' },
   ];
-
-  const impactIcons: Record<string, string> = {
-    'Entrepreneurs Trained': '🎓',
-    'Businesses Launched': '🚀',
-    'Cohorts Completed': '📅',
-    'Businesses Showcased': '🏪',
-    'Youth Reached': '👩‍🎓',
-  };
 
   return (
     <>
@@ -229,20 +249,9 @@ export default function About({ team }: AboutProps) {
             >
               Our Impact
             </motion.h2>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-              {impactStats.map((stat, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className="bg-gray-50 p-6 rounded-lg shadow text-center"
-                >
-                  <div className="text-4xl mb-2 text-primary">{impactIcons[stat.label] ?? '⭐'}</div>
-                  <h3 className="text-4xl font-bold text-primary mb-2">{stat.value}</h3>
-                  <p className="text-gray-600 text-sm">{stat.label}</p>
-                </motion.div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8">
+              {impactStats.map((stat) => (
+                <StatsCounter key={stat.label} {...stat} />
               ))}
             </div>
           </div>
@@ -374,16 +383,25 @@ export default function About({ team }: AboutProps) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start mb-8"
+                  className="flex items-start mb-10"
                 >
-                  <div className="flex-shrink-0 w-20 text-right pr-6">
-                    <div className="text-2xl font-bold text-primary font-heading">
+                  <div className="flex-shrink-0 w-28 text-right pr-6">
+                    <div className="text-2xl font-bold text-primary font-heading whitespace-nowrap">
                       {milestone.year}
                     </div>
                   </div>
-                  <div className="flex-shrink-0 w-4 h-4 rounded-full bg-primary mt-2 -ml-2"></div>
-                  <div className="flex-1 pl-6 pb-8 border-l-2 border-primary">
-                    <p className="text-gray-600">{milestone.event}</p>
+                  <div className="flex-shrink-0 relative">
+                    <div className="w-4 h-4 rounded-full bg-primary mt-2 mx-auto"></div>
+                    <div className="absolute left-2 top-6 h-full border-l-2 border-primary"></div>
+                  </div>
+                  <div className="flex-1 pl-8">
+                    <ul className="space-y-4">
+                      {milestone.events.map((event, eventIndex) => (
+                        <li key={eventIndex} className="text-gray-600">
+                          {event}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </motion.div>
               ))}
