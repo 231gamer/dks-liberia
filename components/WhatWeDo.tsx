@@ -8,11 +8,12 @@ interface WhatWeDoProps {
 }
 
 const fullText =
-  "At the DKS Incubation Center, we are committed to nurturing Liberia’s entrepreneurial ecosystem by promoting innovation and enterprise growth. We provide ideators, startups, and early-stage businesses—especially youth and women-led enterprises—with the skills, mentorship, and resources to grow, scale, and become investment-ready. Our programs integrate practical training, business incubation, research, and workforce development to create resilient businesses, foster inclusive economic growth, and strengthen local communities.";
+  "At the DKS Incubation Center, we drive innovation and enterprise growth by nurturing Liberia’s entrepreneurial ecosystem. We support ideators, startups, and early-stage businesses by providing the skills, mentorship, and resources they need to grow, scale, and become investment-ready. Our integrated programs combine hands-on training, business incubation, market-driven research, and workforce development, helping entrepreneurs build resilient and sustainable businesses. Through this holistic approach, we foster inclusive economic growth, strengthen local value chains, and empower communities across Liberia.";
+
 
 // A concise version suitable for the homepage hero-sized section
 const shortText =
-  "We nurture Liberia’s entrepreneurial ecosystem by equipping ideators and early-stage businesses—especially youth and women-led—with skills, mentorship, and resources to grow, scale, and become investment‑ready. Our programs blend practical training, incubation, research, and workforce development to build resilient businesses and stronger communities.";
+  "The DKS Incubation Center strengthens Liberia’s entrepreneurial ecosystem by equipping ideators and early-stage businesses, especially youth and women-led ventures with the skills, mentorship, and resources needed to grow, scale, and become investment-ready. Our programs combine practical training, incubation support, research, and workforce development to build resilient businesses and stronger, more self-reliant communities.";
 
 export default function WhatWeDo({ variant = 'home', image }: WhatWeDoProps) {
   const copy = variant === 'about' ? fullText : shortText;
@@ -32,7 +33,7 @@ export default function WhatWeDo({ variant = 'home', image }: WhatWeDoProps) {
         >
           <p className="text-primary font-semibold uppercase tracking-widest mb-3">WHAT WE DO</p>
           <h2 className="text-3xl md:text-4xl font-bold text-text mb-6 font-heading leading-snug">
-            We Empower Liberian Entrepreneurs to Grow and Succeed
+            We empower Liberian entrepreneurs to grow and succeed
           </h2>
           <p className="text-lg text-gray-600 mb-6">{copy}</p>
 

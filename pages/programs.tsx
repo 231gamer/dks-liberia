@@ -75,10 +75,7 @@ export default function Programs({ programs }: ProgramsProps) {
                 Empowering Success Through Comprehensive Training
               </h2>
               <p className="text-lg text-gray-600">
-                At DKS Liberia, we offer a range of programs designed to meet the diverse needs of
-                entrepreneurs and professionals. Our programs combine practical training with
-                hands-on mentorship, providing participants with the tools and support needed to
-                succeed in today&apos;s competitive market.
+                At the DKS Incubation Center, we empower Liberian entrepreneurs and professionals through practical training, mentorship, and hands-on support. Since 2019, we have trained over 1,850 youth, supported 285+ MSMEs and entrepreneurs, facilitated the launch of 27+ businesses, equipping participants with the skills, tools, and networks needed to grow their ventures, create jobs, and strengthen local communities.
               </p>
             </motion.div>
           </div>

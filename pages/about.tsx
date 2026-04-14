@@ -15,45 +15,48 @@ interface AboutProps {
 
 export default function About({ team }: AboutProps) {
   const milestones = [
-    { year: '2018', event: 'DKS Liberia founded with a mission to empower entrepreneurs.' },
-    { year: '2019', event: 'Launched Enterprise Development Program (EDP).' },
-    { year: '2020', event: 'Trained over 200 entrepreneurs nationwide.' },
-    { year: '2021', event: 'Introduced the Professional Skills Development Program (IPS-DP).' },
-    { year: '2022', event: 'Launched the Green Innovation Program (GIP).' },
-    { year: '2023', event: '1,000+ entrepreneurs trained and 300+ businesses launched.' },
-    { year: '2024', event: 'Expanded partnerships and reached over 1,500 young professionals.' },
+    { year: '2019 - Present', event: 'Trained over 1,850 youth, equipping them with entrepreneurial skills, mentorship, and practical business knowledge.' },
+    { year: '2019 - Present', event: 'Launched the Integrated Professional Skills Development Program (IPS-DP) to strengthen workforce capabilities.' },
+    { year: '2022 – Present', event: 'Trained over 285 MSMEs, ideators, and entrepreneurs, supporting business growth and enterprise development.' },
+    { year: '2022 – Present', event: 'Launched the Enterprise Development Program (EDP) to support startups and early-stage businesses.' },
+    { year: '2023', event: 'Partnered with Giving Joy Grants to train 55 female entrepreneurs, promoting women-led enterprises.' },
+    { year: '2024', event: 'Strengthened partnership with the Universal Outreach Foundation to manage the Strive Business Development Program (SBDP).' },
+    { year: '2024', event: 'Actively managing the SBDP, providing mentorship, training, and business support to youth and early-stage entrepreneurs.' },
+    { year: '2025', event: 'Launched the Green Innovation Program (GIP), promoting sustainable and environmentally responsible entrepreneurship.' },
+    { year: '2025', event: 'Strengthened partnership with Conservation International under the Adaptation Acceleration Program.' },
+    { year: '2025', event: 'Launched the SBDP Growth Accelerator Program (GAP), enhancing business scalability and investment readiness.' },
   ];
 
   const missionVision = {
     mission:
-      'We empower entrepreneurs and professionals through training, mentorship, incubation, and research — turning local ideas into value-added products and sustainable enterprises that strengthen Liberia’s economy.',
+      'We empower entrepreneurs and professionals through training, mentorship, incubation, and research, turning local ideas into value-added products and sustainable enterprises that strengthen Liberia’s economy.',
     vision:
-      'To be Liberia’s premier hub for enterprise growth — empowering ideators, entrepreneurs, and business owners to transform ideas into impactful ventures that drive inclusive and sustainable community development.',
+      'To be Liberia’s premier hub for enterprise growth: empowering ideators, entrepreneurs, and business owners to transform ideas into impactful ventures that drive inclusive and sustainable community development.',
   };
 
   const coreValues = [
     {
       title: 'Enterprise Growth & Value Creation',
       description:
-        'We turn local ideas and resources into high-quality, value-added products and services that boost productivity and competitiveness.',
+        'We transform local ideas and resources into high-quality, value-added products and services that enhance productivity, increase competitiveness, and strengthen market positioning for emerging businesses.',
       icon: '🚀',
     },
     {
       title: 'Entrepreneur Empowerment',
       description:
-        'We equip entrepreneurs and MSME owners with training, mentorship, and tools to grow, scale, and become investment-ready.',
+        'We equip entrepreneurs and MSME owners with the knowledge, mentorship, and practical tools they need to grow, scale, and become investment-ready, enabling them to build sustainable and competitive businesses.',
       icon: '💼',
     },
     {
       title: 'Market Access & Partnerships',
       description:
-        'We create pathways to markets, networks, and financing, enabling businesses to expand their reach and sustain long-term growth.',
+        'We create strategic pathways to markets, networks, and financing, empowering businesses to expand their reach, strengthen collaborations, and achieve sustainable long-term growth.',
       icon: '🌍',
     },
     {
       title: 'Community Impact & Sustainability',
       description:
-        'We focus on job creation, food security, and community empowerment — promoting inclusive and sustainable development across Liberia.',
+        'We drive job creation, enhance food security, and empower communities, promoting inclusive, resilient, and sustainable development across Liberia',
       icon: '🤝',
     },
   ];
@@ -83,7 +86,7 @@ export default function About({ team }: AboutProps) {
   ];
 
   const impactStats = [
-    { label: 'Entrepreneurs Trained', value: '250+' },
+    { label: 'Entrepreneurs Trained', value: '380+' },
     { label: 'Businesses Launched', value: '27' },
     { label: 'Cohorts Completed', value: '7' },
     { label: 'Businesses Showcased', value: '100+' },
@@ -115,7 +118,6 @@ export default function About({ team }: AboutProps) {
           title="About DKS Incubation Center"
           subtitle="Where Enterprise Grows — Empowering Liberian Entrepreneurs to Innovate, Scale, and Succeed"
         />
-
         {/* Who We Are */}
         <section className="section-padding bg-white">
           <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -125,23 +127,15 @@ export default function About({ team }: AboutProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <p className="text-primary font-semibold uppercase tracking-widest mb-3">About Our Incubation Center</p>
+              <p className="text-primary font-semibold uppercase tracking-widest mb-3">About The Incubation Center</p>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-text font-heading leading-tight">
-                Our goal is to connect and support Liberian entrepreneurs
+                Our goal is to connect and support Liberian entrepreneurs.
               </h2>
               <p className="text-lg text-gray-600 mb-4">
-                The DKS Incubation Center is a social enterprise dedicated to supporting startups,
-                empowering youth and women, and strengthening community-based entrepreneurship across
-                Liberia. Since our founding, we’ve implemented programs such as the Enterprise
-                Development Program (EDP), Integrated Professional Skills Development Programme
-                (IPS-DP), Green Innovation Programme (GIP), and Strive Business Development Programme
-                (SBDP) — training and mentoring over a hundred MSME owners.
+                The DKS Incubation Center is a social enterprise committed to supporting startups, empowering youth and women, and strengthening community-based entrepreneurship across Liberia. Since our establishment, we have implemented transformative programs including the Enterprise Development Program (EDP), Integrated Professional Skills Development Program (IPS-DP), Green Innovation Program (GIP), and the Strive Business Development Program (SBDP) training and mentoring more than one hundred MSME owners.
               </p>
               <p className="text-lg text-gray-600">
-                Our incubation model is community-oriented, integrating social impact, sustainability,
-                and local innovation. We provide hands-on technical training, mentorship, coaching, and
-                research support to help entrepreneurs develop practical skills and build resilient
-                businesses.
+               Our incubation model is community-centered, integrating social impact, sustainability, and local innovation. We offer hands-on technical training, mentorship, coaching, and research support to help entrepreneurs develop practical skills, validate their ideas, and build resilient businesses that contribute meaningfully to Liberia’s development
               </p>
             </motion.div>
 
